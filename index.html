@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container header-content">
+        <div>
+          <p class="eyebrow">JAVASCRIPT PROJECT</p>
+          <h1>User Management System</h1>
+          <p class="header-description">
+            Manage users using JavaScript objects, arrays and array methods.
+          </p>
+        </div>
+
+        <div class="user-count-box">
+          <span>Total Users</span>
+          <strong id="userCount">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ---- ADD USER ------ -->
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">01</span>
+            <h2>Add User</h2>
+          </div>
+
+          <p>Create a new user</p>
+        </div>
+
+        <form id="addUserForm" class="user-form">
+          <div class="input-group">
+            <label for="userName">Name</label>
+            <input
+              type="text"
+              id="userName"
+              placeholder="Enter user name"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="userAge">Age</label>
+            <input
+              type="number"
+              id="userAge"
+              placeholder="Enter age"
+              min="1"
+              max="120"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="userCity">City</label>
+            <input
+              type="text"
+              id="userCity"
+              placeholder="Enter city"
+              required
+            />
+          </div>
+
+          <button type="submit" class="primary-btn">Add User</button>
+        </form>
+
+        <p id="message" class="message"></p>
+      </section>
+
+      <!-- ================= SEARCH & FILTER ================= -->
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">02</span>
+            <h2>Search Users</h2>
+          </div>
+
+          <p>Find users quickly</p>
+        </div>
+
+        <div class="search-area">
+          <div class="input-group">
+            <label for="searchInput">Search by name</label>
+
+            <input type="text" id="searchInput" placeholder="Search user..." />
+          </div>
+
+          <div class="input-group">
+            <label for="cityInput">Find by city</label>
+
+            <input type="text" id="cityInput" placeholder="Enter city..." />
+          </div>
+
+          <button id="searchBtn" class="secondary-btn">Search</button>
+
+          <button id="cityBtn" class="secondary-btn">Find City</button>
+
+          <button id="showAllBtn" class="outline-btn">Show All</button>
+        </div>
+      </section>
+
+      <!-- ===== USERS ======= -->
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">03</span>
+            <h2>Users</h2>
+          </div>
+
+          <p id="usersSubtitle">All registered users</p>
+        </div>
+
+        <div id="usersContainer" class="users-grid"></div>
+      </section>
+
+      <!-- ====== USER STATISTICS ======= -->
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">04</span>
+            <h2>User Statistics</h2>
+          </div>
+
+          <p>Analyze your users</p>
+        </div>
+
+        <div class="statistics-grid">
+          <div class="stat-box">
+            <span>Oldest User</span>
+            <strong id="oldestUser">—</strong>
+            <small id="oldestAge">No data</small>
+          </div>
+
+          <div class="stat-box">
+            <span>Average Age</span>
+            <strong id="averageAge">—</strong>
+            <small>Average user age</small>
+          </div>
+
+          <div class="stat-box">
+            <span>Total Users</span>
+            <strong id="totalUsers">0</strong>
+            <small>Registered users</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= UPDATE USER ====== -->
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <span class="section-number">05</span>
+            <h2>Update User</h2>
+          </div>
+
+          <p>Change existing user information</p>
+        </div>
+
+        <form id="updateUserForm" class="user-form">
+          <div class="input-group">
+            <label for="updateId">User ID</label>
+            <input
+              type="number"
+              id="updateId"
+              placeholder="Enter user ID"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="updateName">New Name</label>
+            <input type="text" id="updateName" placeholder="New name" />
+          </div>
+
+          <div class="input-group">
+            <label for="updateAge">New Age</label>
+            <input
+              type="number"
+              id="updateAge"
+              placeholder="New age"
+              min="1"
+              max="120"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="updateCity">New City</label>
+            <input type="text" id="updateCity" placeholder="New city" />
+          </div>
+
+          <button type="submit" class="primary-btn">Update User</button>
+        </form>
+
+        <p id="updateMessage" class="message"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>User Management System • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
